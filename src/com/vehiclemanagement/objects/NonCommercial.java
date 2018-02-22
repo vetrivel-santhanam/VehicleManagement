@@ -1,6 +1,6 @@
-package com.vehiclemanagement.database;
+package com.vehiclemanagement.objects;
 
-import com.vehiclemanagement.dao.INonCommercial;
+import com.vehiclemanagement.prototype.INonCommercial;
 
 public class NonCommercial extends Vehicle implements INonCommercial {
 	

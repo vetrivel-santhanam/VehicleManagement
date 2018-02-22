@@ -1,6 +1,6 @@
-package com.vehiclemanagement.database;
+package com.vehiclemanagement.objects;
 
-import com.vehiclemanagement.dao.ICommercial; 
+import com.vehiclemanagement.prototype.ICommercial; 
 
 public class Commercial extends Vehicle implements ICommercial{
 	protected double ratePerKm;

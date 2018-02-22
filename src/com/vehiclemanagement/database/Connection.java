@@ -17,7 +17,7 @@ public class Connection {
 		try {
 			driver = new com.mysql.jdbc.Driver();
 			DriverManager.registerDriver(driver);
-			con = (java.sql.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/vehicle", "root", "password123");
+			con = (java.sql.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/vehicle", "root", "1234");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

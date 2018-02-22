@@ -1,15 +1,40 @@
-package com.vehiclemanagement.database;
+package com.vehiclemanagement.objects;
 
-import com.vehiclemanagement.dao.IVehicle;
+import com.vehiclemanagement.prototype.IVehicle;
 
 public class Vehicle implements IVehicle{
-    protected int wheels;
+	protected String regNumber; // PK
+	protected String engineNumber; // PK        
     protected String company;
     protected String model;
     protected String make;
     protected String fuel;
     protected double onRoadPrice;
-    protected String engineNumber;
+    protected int wheels;
+    
+    public Vehicle() {
+    	regNumber = "";
+    	engineNumber = "";    	
+    	company = "";
+    	model = "";
+    	make = "";
+    	fuel = "";
+    	onRoadPrice = 0.0;
+    	wheels = 0;
+    }
+    
+    public Vehicle(Vehicle vehicle) {
+    	regNumber = vehicle.regNumber;
+    	engineNumber = vehicle.engineNumber;    	
+    	company = vehicle.company;
+    	model = vehicle.model;
+    	make = vehicle.make;
+    	fuel = vehicle.fuel;
+    	onRoadPrice = vehicle.onRoadPrice;
+    	wheels = vehicle.wheels;
+    }
+    
+    
 	@Override
 	public void start() {
 		// TODO Auto-generated method stub
@@ -90,5 +115,15 @@ public class Vehicle implements IVehicle{
 	@Override
 	public void setEngineNumber(String engineNumber) {
 		this.engineNumber = engineNumber;		
+	}
+	
+	@Override
+	public String getRegNumber() {
+		// TODO Auto-generated method stub
+		return regNumber;
+	}
+	@Override
+	public void setRegNumber(String regNumber) {
+		this.regNumber = regNumber;		
 	}
 }

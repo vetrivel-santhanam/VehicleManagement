@@ -1,13 +1,22 @@
 import java.util.Scanner;
 
 import com.vehiclemanagement.database.Connection;
+import com.vehiclemanagement.ui.console.TwoWheelerDetails;
 import com.vehiclemanagement.ui.console.VehicleDetails;
+import com.vehiclemanagement.objects.TwoWheeler;
+import com.vehiclemanagement.objects.Vehicle;
 
 public class MainClass {
 
 	public static void main(String[] args) {
-		Connection  dbInit = new Connection();
-		System.out.println("Connection is established "+dbInit.createConnection());
+		//Connection  dbInit = new Connection();
+		//System.out.println("Connection is established "+dbInit.createConnection());
+		
+		//mainVehicleDetails();
+		mainTwoWheelerDetails();
+	}
+		
+	/*public static void mainVehicleDetails() {
         VehicleDetails vehicleDetails = new VehicleDetails();
         int option = 0;
         do {			
@@ -46,5 +55,53 @@ public class MainClass {
 				break;
 			}
 		} while (option!=5);
-	}
+	}*/
+	
+	public static void mainTwoWheelerDetails() {
+		TwoWheelerDetails vehicleDetails = new TwoWheelerDetails();
+        int option = 0;
+        do {			
+			System.out.println("=================MENU==============");
+			System.out.println("1. View TwoWheeler Details");
+			System.out.println("2. Insert TwoWheeler Details");
+			System.out.println("3. Update TwoWheeler Details");
+			System.out.println("4. Delete TwoWheeler Details");
+			System.out.println("5. Quit");
+			System.out.println("Enter the Option: ");
+			Scanner input = new Scanner(System.in);
+			option = input.nextInt();
+			switch (option) {
+			case 1: // View
+				vehicleDetails.viewVehicleDetails();
+				break;
+
+			case 2: // Insert
+			{
+				TwoWheeler vehicle = vehicleDetails.getVehicleDetails();						
+				vehicleDetails.insertVehicleDetails(vehicle);
+				vehicleDetails.viewVehicleDetails();
+			}
+				break;
+
+			case 3: // Update
+			{
+				TwoWheeler vehicle = vehicleDetails.getVehicleDetails();
+				vehicleDetails.updateVehicleDetails(vehicle);
+				vehicleDetails.viewVehicleDetails();
+			}
+				break;
+
+			case 4: // Delete
+			{
+				TwoWheeler vehicle = vehicleDetails.getVehicleDetails();				
+				vehicleDetails.deleteVehicleDetails(vehicle);
+				vehicleDetails.viewVehicleDetails();
+			}
+				break;
+			default:
+				break;
+			}
+		} while (option!=5);
+	}	
+
 }

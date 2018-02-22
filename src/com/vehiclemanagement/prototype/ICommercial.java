@@ -1,4 +1,4 @@
-package com.vehiclemanagement.dao;
+package com.vehiclemanagement.prototype;
 
 public interface ICommercial extends IVehicle{    
     public double getRatePerKm();    

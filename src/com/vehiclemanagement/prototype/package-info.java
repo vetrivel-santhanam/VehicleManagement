@@ -5,4 +5,4 @@
  * @author User
  *
  */
-package com.vehiclemanagement.dao;
+package com.vehiclemanagement.prototype;

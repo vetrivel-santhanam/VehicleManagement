@@ -1,6 +1,6 @@
-package com.vehiclemanagement.database;
+package com.vehiclemanagement.objects;
 
-import com.vehiclemanagement.dao.IHeavyMotorVehicle;
+import com.vehiclemanagement.prototype.IHeavyMotorVehicle;
 
 public class HeavyMotorVehicle extends Vehicle implements IHeavyMotorVehicle {
 	protected boolean trailerAttached;

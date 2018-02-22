@@ -1,6 +1,6 @@
-package com.vehiclemanagement.database;
+package com.vehiclemanagement.objects;
 
-import com.vehiclemanagement.dao.ILightMotorVehicle;
+import com.vehiclemanagement.prototype.ILightMotorVehicle;
 
 public class LightMotorVehicle extends Vehicle implements ILightMotorVehicle {
 	protected int seats;

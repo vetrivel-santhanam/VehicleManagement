@@ -1,4 +1,4 @@
-package com.vehiclemanagement.dao;
+package com.vehiclemanagement.prototype;
 
 public interface IVehicle {
     public void start();
@@ -17,5 +17,7 @@ public interface IVehicle {
 	public double getOnRoadPrice();
 	public void setOnRoadPrice(double onRoadPrice);
 	public String getEngineNumber();
-	public void setEngineNumber(String engineNumber);	
+	public void setEngineNumber(String engineNumber);
+	public String getRegNumber();
+	public void setRegNumber(String regNumber);
 }

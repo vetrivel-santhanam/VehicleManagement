@@ -1,4 +1,4 @@
-package com.vehiclemanagement.dao;
+package com.vehiclemanagement.prototype;
 
 public interface IWithGear {
     int getCurrentGear();
