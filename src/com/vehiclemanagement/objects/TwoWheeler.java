@@ -6,7 +6,7 @@ enum option {FALSE, TRUE} // Capital and prev to class defn
 
 public class TwoWheeler extends Vehicle implements ITwoWheeler{
 	protected String breakType;
-	protected option pillionAvailable;//boolean pillionAvailable;	
+	protected option pillionAvailable;	
 	
 	public TwoWheeler() {
 	   	breakType = "";
